@@ -21,6 +21,8 @@ alias gi="git init"
 alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push origin master"
+alias gcl="git clone"
+alias gpl="git pull"
 
 # Processes
 alias pfind="ps aux | grep"

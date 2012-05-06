@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# Colors
+BLACK='\e[0;30m'
+RED='\e[0;31m'
+GREEN='\e[0;32m'
+YELLOW='\e[0;33m'
+BLUE='\e[0;34m'
+PURPLE='\e[0;35m'
+CYAN='\e[0;36m'
+WHITE='\e[0;37m'
+# Bold
+bBLACK='\e[1;30m'
+bRED='\e[1;31m'
+bGREEN='\e[1;32m'
+bYELLOW='\e[1;33m'
+bBLUE='\e[1;34m'
+bPURPLE='\e[1;35m'
+bCYAN='\e[1;36m'
+bWHITE='\e[1;37m'
+# Text Reset
+RESET='\e[0m'
+
+GIT_PROMPT_PREFIX="[git:"
+GIT_PROMPT_SUFFIX="]\[$RESET\]"
+GIT_PROMPT_DIRTY="\[$RED\]+"
+GIT_PROMPT_CLEAN="\[$GREEN\]"
+
+# Checks if working tree is dirty
+parse_git_dirty() {
+  local SUBMODULE_SYNTAX=''
+  if [[ $POST_1_7_2_GIT -gt 0 ]]; then
+        SUBMODULE_SYNTAX="--ignore-submodules=dirty"
+  fi
+  if [[ -n $(git status -s ${SUBMODULE_SYNTAX}  2> /dev/null) ]]; then
+    echo "$GIT_PROMPT_DIRTY"
+  else
+    echo "$GIT_PROMPT_CLEAN"
+  fi
+}
+
+function current_branch() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo ${ref#refs/heads/}
+}
+
+function git_prompt_info() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo "$(parse_git_dirty)$GIT_PROMPT_PREFIX$(current_branch)$GIT_PROMPT_SUFFIX"
+}
+
+#Prompt
+PS1="\n\[$bBLACK\]\w\n\[$bGREEN\]>\[$RESET\] "

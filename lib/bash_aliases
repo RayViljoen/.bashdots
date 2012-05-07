@@ -3,7 +3,7 @@
 # Dotfiles
 
 alias d="cd ~/.bashdots/"
-alias de="subl ~/.bashdots/.aliases"
+alias de="subl ~/.bashdots/bash_*"
 
 # Shortcuts
 

@@ -1,18 +1,41 @@
 #!/bin/bash
 
+# Welcome
+echo ""
+echo " _ __               ___          "
+echo "( /  )          /  ( / \   _/_   "
+echo " /--< __,  (   /_   /  /__ /  (  "
+echo "/___/(_/(_/_)_/ /_(/\_/(_)(__/_)_"
+echo ""
+echo "by Ray Viljoen"
+echo "https://github.com/RayViljoen/bashdots/"
+echo ""
+
+# Change to .bashdots
 cd "$(dirname "$0")"
+
+# Update to latest
 git pull
-function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
+
+# Create symlinks
+function linkIt() {
+	
+	ln -sf $PWD/.bash_profile ~/.bash_profile
+	ln -sf $PWD/.bashrc ~/.bashrc
+	ln -sf $PWD/.inputrc ~/.inputrc
+
+	# Source it
+	source ~/.bash_profile
 }
+
+# Confirm unless forced
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
-	doIt
+	linkIt
 else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
+	read -p "Create bashdots symlinks and overwrite existing bash dotfiles? (y/n) " -n 1
 	echo
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		doIt
+		linkIt
 	fi
 fi
-unset doIt
-source ~/.bashdots/.bash_profile
+unset linkIt

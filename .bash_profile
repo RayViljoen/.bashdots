@@ -1,8 +1,14 @@
-# Load .bash_prompt, .exports, .aliases and .functions
-for file in ~/.bashdots/.{bash_prompt,aliases,functions}; do
-	[ -r "$file" ] && source "$file"
+#!/bin/bash
+
+# Get path resolving symlinks
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
+FILES="$( cd -P "$( dirname "$SOURCE" )" && pwd )/lib/bash_*"
+
+# Load dotfile exstensions
+for f in $FILES
+do source $f
 done
-unset file
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
@@ -16,9 +22,6 @@ shopt -s cdspell
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
-
-# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
 
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit

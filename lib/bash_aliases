@@ -20,14 +20,15 @@ alias g="git status"
 alias gi="git init"
 alias ga="git add"
 alias gc="git commit -m"
-alias gp="git push origin master"
-alias gcl="git clone"
-alias gpl="git pull"
+alias gb="git branch"
+alias gp="git pull"
+alias gpo="git push origin"
 
 # Processes
 alias pfind="ps aux | grep"
 alias pmem="top -o vsize"
 alias pcpu="top -o cpu"
+alias pkill="kill -9 "
 
 # List all files colorized in long format
 alias l="ls -Gl"

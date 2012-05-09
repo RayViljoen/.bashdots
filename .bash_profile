@@ -3,7 +3,7 @@
 # Get path resolving symlinks
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
-FILES="$( cd -P "$( dirname "$SOURCE" )" && pwd )/lib/bash_*"
+FILES="$( cd -P "$( dirname "$SOURCE" )" && pwd )/lib/*"
 
 # Load dotfile exstensions
 for f in $FILES

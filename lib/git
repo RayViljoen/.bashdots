@@ -1,16 +1,20 @@
 #!/bin/bash
 
-# Aliases
+# ====== Aliases ======
+
 alias g="git status"
 alias gl="git log"
 alias gi="git init"
 alias ga="bd_git_add"
 alias gc="git commit -v -m"
+alias gm="git merge"
 alias gb="git branch"
+alias gco="git checkout"
 alias gp="bd_git_push"
 alias gpl="git pull"
+alias gr="git reset HEAD"
 
-# Functions
+# ====== Functions ======
 
 # Git push
 function bd_git_push() {

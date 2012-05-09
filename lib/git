@@ -4,7 +4,7 @@
 alias g="git status"
 alias gl="git log"
 alias gi="git init"
-alias ga="git add"
+alias ga="bd_git_add"
 alias gc="git commit -v -m"
 alias gb="git branch"
 alias gp="bd_git_push"
@@ -18,6 +18,15 @@ function bd_git_push() {
 		git push origin $1
 	else # Default master
 		git push origin master
+	fi
+}
+
+# Git add
+function bd_git_add() {
+	if [ -n "$1" ]; then # Check if argument passed
+		git add $1
+	else # Default to -A
+		git add -A
 	fi
 }
 

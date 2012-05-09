@@ -34,6 +34,16 @@ function bd_git_add() {
 	fi
 }
 
+# Check git dirty
+function git_dirty() {
+	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+}
+
+# Return current branch
+function git_branch() {
+	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+}
+
 # Use Git colored diff when available
 hash git &>/dev/null
 if [ $? -eq 0 ]; then

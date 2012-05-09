@@ -3,7 +3,7 @@
 # Dotfiles
 
 alias d="cd ~/.bashdots/"
-alias de="subl ~/.bashdots/bash_*"
+alias de="subl ~/.bashdots/*"
 
 # Shortcuts
 
@@ -60,3 +60,6 @@ alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && kil
 
 # Kill volume
 alias mute="osascript -e 'set volume 0'"
+
+# Unf*#@ Xcode
+alias xfix="launchctl list|grep UIKitApplication|awk '{print $3}'|xargs launchctl remove"

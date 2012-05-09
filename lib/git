@@ -2,17 +2,15 @@
 
 # Aliases
 alias g="git status"
+alias gl="git log"
 alias gi="git init"
 alias ga="git add"
-alias gc="bd_git_commit"
+alias gc="git commit -v -m"
 alias gb="git branch"
 alias gp="bd_git_push"
 alias gpl="git pull"
 
 # Functions
-function bd_git_commit() {
-	git commit -m "$1"
-}
 
 # Git push
 function bd_git_push() {

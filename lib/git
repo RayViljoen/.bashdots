@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Use Git colored diff when available
+hash git &>/dev/null
+if [ $? -eq 0 ]; then
+	function diff() {
+		git diff --no-index --color-words "$@"
+	}
+fi
+
+# Aliases
+alias g="git status"
+alias gi="git init"
+alias ga="git add"
+alias gc="bd_git_commit"
+alias gb="git branch"
+alias gp="git pull"
+alias gpo="git push origin"
+
+# Functions
+function bd_git_commit() {
+	git commit -m "$1"
+}

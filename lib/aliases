@@ -15,15 +15,6 @@ alias ..="cd .."
 alias o="open"
 alias oo="open ."
 
-# Git
-alias g="git status"
-alias gi="git init"
-alias ga="git add"
-alias gc="git commit -m"
-alias gb="git branch"
-alias gp="git pull"
-alias gpo="git push origin"
-
 # Processes
 alias pfind="ps aux | grep"
 alias pmem="top -o vsize"

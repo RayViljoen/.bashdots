@@ -14,7 +14,7 @@ alias gpl="git pull"
 
 # Git push
 function bd_git_push() {
-	if [ -n "$1" ]; then # Check if not master
+	if [ "$1" ]; then # Check if not master
 		git push origin $1
 	else # Default master
 		git push origin master
@@ -23,7 +23,7 @@ function bd_git_push() {
 
 # Git add
 function bd_git_add() {
-	if [ -n "$1" ]; then # Check if argument passed
+	if [ "$1" ]; then # Check if argument passed
 		git add $1
 	else # Default to -A
 		git add -A

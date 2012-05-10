@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Dotfiles
-
-alias d="cd ~/.bashdots/"
-alias de="subl ~/.bashdots/*"
-
 # Shortcuts
 
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"

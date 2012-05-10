@@ -1,9 +1,11 @@
 #!/bin/bash
 
+alias bd="bashdots"
+
 function bashdots() {
 
 		# Update flag
-		if [ "$1" == "--upudate" -o "$1" == "-u" ]; then	
+		if [ "$1" == "--update" -o "$1" == "-u" ]; then	
 			echo "Updating..."
 			git pull
 			echo "Done"
@@ -11,5 +13,7 @@ function bashdots() {
 		# Show help flag
 		elif [ "$1" == "--help" -o "$1" == "-h" ]; then
 			echo "BashDots Help in progress"
+		else
+			cd "${BASHDOTS_DIR}"
 		fi
 	}

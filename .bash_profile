@@ -2,13 +2,24 @@
 
 # Get path resolving symlinks
 SOURCE="${BASH_SOURCE[0]}"
-while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
-FILES="$( cd -P "$( dirname "$SOURCE" )" && pwd )/lib/*"
+while [ -h "$SOURCE" ]
+do SOURCE="$(readlink "$SOURCE")"
+done
 
-# Load dotfile exstensions
-for f in $FILES
+# Set BashDots path
+BASHDOTS_DIR="$( dirname $SOURCE )"
+
+# ============== Load config ===============
+
+source "$BASHDOTS_DIR/config"
+
+# ============ Load dotfile lib ============
+
+for f in "$BASHDOTS_DIR/lib/*"
 do source $f
 done
+
+# ============== Misc configs ==============
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob

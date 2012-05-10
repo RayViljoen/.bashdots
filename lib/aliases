@@ -63,3 +63,7 @@ alias mute="osascript -e 'set volume 0'"
 
 # Unf*#@ Xcode
 alias xfix="launchctl list|grep UIKitApplication|awk '{print $3}'|xargs launchctl remove"
+
+# Ping
+alias p1="ping -c 1"
+alias p3="ping -c 3"

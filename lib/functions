@@ -25,4 +25,13 @@ function unidecode() {
 	perl -e "binmode(STDOUT, ':utf8'); print \"$@\""
 	echo # newline
 }
-	
+
+# Formats unix timestamp
+function todate {
+    perl -e "require 'ctime.pl'; print &ctime($1);"
+}
+
+# Creates fake file (0's) of $1 MB
+function mkfake {
+    perl -e "print '0' x 1024 x 1024 x $1" > $1-MB-fake-file.txt
+}

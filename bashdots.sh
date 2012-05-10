@@ -8,16 +8,35 @@ echo "
 /___/(_/(_/_)_/ /_(/\_/(_)(__/_)_
 https://github.com/RayViljoen/bashdots/
 "
+# .bashdots dir
+BD_DIR="$(dirname "$0")"
 
 # Change to .bashdots
-cd "$(dirname "$0")"
+cd "$BD_DIR"
 
-# Create symlinks
+# Install
 function linkIt() {
-	
+
+	#----------------------------
+	# ----- Create symlinks -----
+	#----------------------------
+
 	ln -sf $PWD/.bash_profile ~/.bash_profile
 	ln -sf $PWD/.bashrc ~/.bashrc
 	ln -sf $PWD/.inputrc ~/.inputrc
+
+	#---------------------------
+	# --- Install any extras ---
+	#---------------------------
+
+	# Gems
+	if type -P gem &>/dev/null; then
+		
+		# https://github.com/adamcooke/key-installer
+		# Script to push an SSH key to a remote host via. SSH.
+		gem sources -a http://gems.github.com
+		sudo gem install adamcooke-key-installer
+	fi
 
 	# Source it
 	source ~/.bash_profile
@@ -27,12 +46,6 @@ function linkIt() {
 # Confirm symlinks unless forced
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	linkIt
-# Check if updated
-elif [ "$1" == "--upudate" -o "$1" == "-u" ]; then
-	
-	echo "Updating..."
-	git pull
-	echo "Done"
 # Default to install with prompt
 else
 	read -p "Create BashDots symlinks and overwrite existing bash dotfiles? (y/n) " -n 1

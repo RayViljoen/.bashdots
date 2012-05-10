@@ -1,0 +1,15 @@
+#!/bin/bash
+
+function bashdots() {
+
+		# Update flag
+		if [ "$1" == "--upudate" -o "$1" == "-u" ]; then	
+			echo "Updating..."
+			git pull
+			echo "Done"
+
+		# Show help flag
+		elif [ "$1" == "--help" -o "$1" == "-h" ]; then
+			echo "BashDots Help in progress"
+		fi
+	}

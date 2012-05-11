@@ -5,13 +5,14 @@ alias bd="bashdots"
 function bashdots() {
 		
 		# CD to Bashdots if no args
-		if [ -n "$1" ]; then
-			cd "${BASHDOTS_DIR}"
+		if [ "$1" == "" ]; then
+			cd "$BASHDOTS_DIR"
 
 		# Update flag
-		elif [ "$1" == "--update" -o "$1" == "-u" ]; then	
-			echo "Updating..."
-			git pull
+		elif [ "$1" == "--update" -o "$1" == "-u" ]; then
+			echo "Updating BashDots..."
+			git pull "$BASHDOTS_DIR"
+			source "~/.bash_profile"
 			echo "Done"
 
 		# Show help flag

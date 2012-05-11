@@ -14,6 +14,7 @@ BASHDOTS_DIR="$( dirname $SOURCE )"
 source "$BASHDOTS_DIR/config"
 
 # ============ Load dotfile lib ============
+
 FILES="$( cd -P $BASHDOTS_DIR && pwd )/lib/*"
 for f in $FILES
 do source $f

@@ -3,17 +3,24 @@
 alias bd="bashdots"
 
 function bashdots() {
+		
+		# CD to Bashdots if no args
+		if [ -n "$1" ]; then
+			cd "${BASHDOTS_DIR}"
 
 		# Update flag
-		if [ "$1" == "--update" -o "$1" == "-u" ]; then	
+		elif [ "$1" == "--update" -o "$1" == "-u" ]; then	
 			echo "Updating..."
 			git pull
 			echo "Done"
 
 		# Show help flag
 		elif [ "$1" == "--help" -o "$1" == "-h" ]; then
-			echo "BashDots Help in progress"
+			echo "BashDots help in progress"
+		
+		# Lastly show usage if arg not recognised
 		else
-			cd "${BASHDOTS_DIR}"
+			echo "BashDots usage in progress"	
+
 		fi
 	}

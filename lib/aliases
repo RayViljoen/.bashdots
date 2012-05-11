@@ -9,6 +9,7 @@ alias mamp="cd /Applications/MAMP/htdocs/"
 alias ..="cd .."
 alias o="open"
 alias oo="open ."
+alias b-="cd -"
 
 # Processes
 alias pfind="ps aux | grep"

@@ -43,3 +43,5 @@ function __bd_update() {
 	source "$BASHDOTS_SOURCE"
 	echo "Done"
 }
+
+# Open all lib files in EDITOR 

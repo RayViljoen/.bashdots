@@ -2,8 +2,8 @@
 
 # Shortcuts
 
+alias e=$EDITOR
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
-alias e="subl"
 alias dev="cd ~/Development/"
 alias mamp="cd /Applications/MAMP/htdocs/"
 alias ..="cd .."

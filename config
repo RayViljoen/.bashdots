@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # User downloads directory
-DOWNLOADS_DIR="~/Downloads/"
+DOWNLOADS_DIR="${HOME}/Downloads/"
+
+# Default editor
+EDITOR="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 # ============== Misc configs ==============
 

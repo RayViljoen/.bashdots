@@ -22,7 +22,9 @@ function __bd_help() {
 	echo "BashDots help & usage in progress"
 }
 
+# Change to .bashdots dir
 function __bd_goto() {
+
 	cd "$BASHDOTS_DIR"
 	echo " _ __               ___          "
 	echo "( /  )          /  ( / \   _/_   "
@@ -31,9 +33,13 @@ function __bd_goto() {
 	echo "https://github.com/RayViljoen/bashdots/"
 }
 
+# Change to .bashdots, do git pull and return to current dir
 function __bd_update() {
+
 	echo "Updating BashDots..."
-	git pull "$BASHDOTS_DIR"
+	cd "$BASHDOTS_DIR"
+	git pull
+	cd "$OLDPWD"
 	source "$BASHDOTS_SOURCE"
 	echo "Done"
 }

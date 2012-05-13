@@ -35,3 +35,8 @@ function todate {
 function mkfake {
     perl -e "print '0' x 1024 x 1024 x $1" > $1-MB-fake-file.txt
 }
+
+# Download file to DOWNLOADS_DIR unless $2 is specified
+function download() {
+	curl $1 -o $DOWNLOADS_DIR
+}

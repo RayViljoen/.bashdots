@@ -2,26 +2,38 @@
 
 alias bd="bashdots"
 
+# Main bashdots statement
 function bashdots() {
-		
-		# CD to Bashdots if no args
-		if [ "$1" == "" ]; then
-			cd "$BASHDOTS_DIR"
+	case "$1" in
 
-		# Update flag
-		elif [ "$1" == "--update" -o "$1" == "-u" ]; then
-			echo "Updating BashDots..."
-			git pull "$BASHDOTS_DIR"
-			source "~/.bash_profile"
-			echo "Done"
+		-h|--help) __bd_help ;;		# Help
+	    -g|--goto) __bd_goto ;;		# Goto
+	    -u|--update) __bd_update ;;	# Update
+	    *) __bd_help ;;				# Invalid
 
-		# Show help flag
-		elif [ "$1" == "--help" -o "$1" == "-h" ]; then
-			echo "BashDots help in progress"
-		
-		# Lastly show usage if arg not recognised
-		else
-			echo "BashDots usage in progress"	
+	esac
+}
 
-		fi
-	}
+# --------------------------------
+# 	Bashdots functions from main
+# --------------------------------
+
+function __bd_help() {
+	echo "BashDots help & usage in progress"
+}
+
+function __bd_goto() {
+	cd "$BASHDOTS_DIR"
+	echo " _ __               ___          "
+	echo "( /  )          /  ( / \   _/_   "
+	echo " /--< __,  (   /_   /  /__ /  (  "
+	echo "/___/(_/(_/_)_/ /_(/\_/(_)(__/_)_"
+	echo "https://github.com/RayViljoen/bashdots/"
+}
+
+function __bd_update() {
+	echo "Updating BashDots..."
+	git pull "$BASHDOTS_DIR"
+	source "$BASHDOTS_SOURCE"
+	echo "Done"
+}

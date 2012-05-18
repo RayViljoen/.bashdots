@@ -6,10 +6,11 @@ alias bd="bashdots"
 function bashdots() {
 	case "$1" in
 
-		-h|--help) __bd_help ;;		# Help
-	    -g|--goto) __bd_goto ;;		# Goto
-	    -u|--update) __bd_update ;;	# Update
-	    *) __bd_help ;;				# Invalid
+		-h|--help) __bd_help ;;			# Help
+	    -g|--goto) __bd_goto ;;			# Goto
+	    -s|--source) __bd_refresh ;;	# Source
+	    -u|--update) __bd_update ;;		# Update
+	    *) __bd_help ;;					# Invalid
 
 	esac
 }
@@ -17,6 +18,11 @@ function bashdots() {
 # --------------------------------
 # 	Bashdots functions from main
 # --------------------------------
+
+function __bd_refresh() {
+	source $BASHDOTS_SOURCE
+	echo "BashDots refreshed."
+}
 
 function __bd_help() {
 	echo "BashDots help & usage in progress"

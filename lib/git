@@ -13,6 +13,7 @@ alias gco="git checkout"
 alias gp="bd_git_push"
 alias gpl="git pull"
 alias gr="git reset HEAD"
+alias gamend="git commit --amend -m"
 
 # ====== Functions ======
 

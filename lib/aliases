@@ -11,6 +11,8 @@ alias o="open"
 alias oo="open ."
 alias b="cd -"
 
+alias cement="~/Development/Cement/Lib/cement"
+
 # Processes
 alias pfind="ps aux | grep"
 alias pmem="top -o vsize"

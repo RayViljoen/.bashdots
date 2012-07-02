@@ -36,6 +36,7 @@ function linkIt() {
 		# Script to push an SSH key to a remote host via. SSH.
 		gem sources -a http://gems.github.com
 		sudo gem install adamcooke-key-installer
+		brew install tree
 	fi
 
 	# Source it

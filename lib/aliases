@@ -10,6 +10,7 @@ alias ..="cd .."
 alias o="open"
 alias oo="open ."
 alias b="cd -"
+alias t="tree"
 
 alias cement="~/Development/Cement/Lib/cement"
 

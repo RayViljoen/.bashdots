@@ -35,3 +35,8 @@ function todate {
 function mkfake {
     perl -e "print '0' x 1024 x 1024 x $1" > $1-MB-fake-file.txt
 }
+
+# Creates new dir and cd's into it
+function makeopen {
+	mkdir $1 && cd $1
+}

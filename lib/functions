@@ -40,3 +40,8 @@ function mkfake {
 function makeopen {
 	mkdir $1 && cd $1
 }
+
+# Trash file or dir to user .Trash
+function saferm {
+	mv -f "$@" ~/.Trash
+}

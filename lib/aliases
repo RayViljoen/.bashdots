@@ -13,6 +13,7 @@ alias b="cd -"
 alias t="tree"
 alias mo="makeopen"
 alias lib="cd ~/Library/ && open ."
+alias del="saferm"
 
 alias cement="~/Development/Cement/Lib/cement"
 

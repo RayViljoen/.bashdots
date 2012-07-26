@@ -14,6 +14,29 @@ BD_DIR="$(dirname "$0")"
 # Change to .bashdots
 cd "$BD_DIR"
 
+# Configure OSX Defaults
+
+# Enable subpixel font rendering on non-Apple LCDs
+defaults write NSGlobalDomain AppleFontSmoothing -int 2
+# Set a blazingly fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 0
+# Show all filename extensions in Finder
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+# Avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+# Show the ~/Library folder
+chflags nohidden ~/Library
+# Remove the auto-hiding Dock delay
+defaults write com.apple.Dock autohide-delay -float 0
+# Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+# Prevent Time Machine from prompting to use new hard drives as backup volume
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+# Disable Dashboard
+defaults write com.apple.dashboard mcx-disabled -boolean YES
+# Reset Dock (After killing dashboard)
+killall Dock
+
 # Install
 function linkIt() {
 

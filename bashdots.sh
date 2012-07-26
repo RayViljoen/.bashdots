@@ -28,14 +28,10 @@ function linkIt() {
 	#---------------------------
 	# --- Install any extras ---
 	#---------------------------
-
-	# Gems
-	if type -P gem &>/dev/null; then
+	
+	# Homebrew packages
+	if type -P brew &>/dev/null; then
 		
-		# https://github.com/adamcooke/key-installer
-		# Script to push an SSH key to a remote host via. SSH.
-		gem sources -a http://gems.github.com
-		sudo gem install adamcooke-key-installer
 		brew install tree
 	fi
 

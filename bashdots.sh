@@ -15,7 +15,7 @@ BD_DIR="$(dirname "$0")"
 cd "$BD_DIR"
 
 # Configure OSX Defaults
-
+echo 'Setting new osx defaults.'
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # Set a blazingly fast keyboard repeat rate
@@ -37,6 +37,11 @@ defaults write com.apple.dashboard mcx-disabled -boolean YES
 # Reset Dock (After killing dashboard)
 killall Dock
 
+# Install quicklook plugins
+echo 'Installing quicklook plugins.'
+cp -r ./quicklook_plugins/ /Library/QuickLook/
+qlmanage -r &>/dev/null;
+
 # Install
 function linkIt() {
 
@@ -55,7 +60,8 @@ function linkIt() {
 	# Homebrew packages
 	if type -P brew &>/dev/null; then
 		
-		brew install tree
+		# Install tree if not already
+		command -v tree >/dev/null 2>&1 || brew install tree
 	fi
 
 	# Source it

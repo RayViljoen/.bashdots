@@ -39,7 +39,14 @@ killall Dock
 
 # Install quicklook plugins
 echo 'Installing quicklook plugins.'
-cp -r ./quicklook_plugins/ /Library/QuickLook/
+quicklook_dir="${HOME}/Library/QuickLook/"
+# Check for plugins dir and create if not exists
+if [ ! -d  $quicklook_dir ]; then
+	mkdir $quicklook_dir
+fi
+# Copy plugins to ql dir
+cp -r ./quicklook_plugins/ $quicklook_dir
+# Reload plugins
 qlmanage -r &>/dev/null;
 
 # Install

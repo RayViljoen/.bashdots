@@ -27,7 +27,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Show the ~/Library folder
 chflags nohidden ~/Library
 # Remove the auto-hiding Dock delay
-defaults write com.apple.Dock autohide-delay -float 0
+# defaults write com.apple.Dock autohide-delay -float 0
 # Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 # Prevent Time Machine from prompting to use new hard drives as backup volume

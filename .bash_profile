@@ -20,3 +20,11 @@ BD_LIB_FILES="$( cd -P $BASHDOTS_DIR && pwd )/lib/*"
 for f in $BD_LIB_FILES
 do source $f
 done
+# {{{
+# Node Completion - Auto-generated, do not touch.
+shopt -s progcomp
+for f in $(command ls ~/.node-completion); do
+  f="$HOME/.node-completion/$f"
+  test -f "$f" && . "$f"
+done
+# }}}

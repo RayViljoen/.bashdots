@@ -45,3 +45,8 @@ function makeopen {
 function saferm {
 	mv -f "$@" ~/.Trash
 }
+
+# Copy file to clipboard
+function copytoclipboard {
+	cat $1 | pbcopy
+}

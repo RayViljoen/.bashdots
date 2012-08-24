@@ -16,6 +16,10 @@ alias lib="cd ~/Library/ && open ."
 alias del="saferm"
 alias cb="copytoclipboard"
 
+# PostgreSQL
+alias=psqlstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias psqlstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+
 alias cement="~/Development/Cement/Lib/cement"
 
 # Processes

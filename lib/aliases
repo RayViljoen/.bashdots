@@ -17,8 +17,17 @@ alias del="saferm"
 alias cb="copytoclipboard"
 
 # PostgreSQL
-alias=psqlstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias psqlstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias psqlstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+
+# MongoDB
+alias mongostart="mongod run --config /usr/local/etc/mongod.conf"
+
+# Neo4j
+neostart="neo4j start"
+neostop="neo4j stop"
+neoapi="open http://localhost:7474/db/data/"
+neoadmin="open http://localhost:7474/webadmin/"
 
 alias cement="~/Development/Cement/Lib/cement"
 

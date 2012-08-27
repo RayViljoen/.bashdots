@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PATH="/usr/local/bin:$PATH"
+
 # Set .bash_profile
 BASHDOTS_SOURCE="${BASH_SOURCE[0]}"
 # Resolve symlinks

@@ -24,10 +24,10 @@ alias psqlstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias mongostart="mongod run --config /usr/local/etc/mongod.conf"
 
 # Neo4j
-neostart="neo4j start"
-neostop="neo4j stop"
-neoapi="open http://localhost:7474/db/data/"
-neoadmin="open http://localhost:7474/webadmin/"
+alias neostart="neo4j start"
+alias neostop="neo4j stop"
+alias neoapi="open http://localhost:7474/db/data/"
+alias neoadmin="open http://localhost:7474/webadmin/"
 
 alias cement="~/Development/Cement/Lib/cement"
 

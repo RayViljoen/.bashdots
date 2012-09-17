@@ -20,8 +20,8 @@ alias src="source ~/.bash_profile"
 
 # Apache
 alias apache="sudo apachectl"
-alias hosts="/etc/apache2/httpd.conf"
-alias vhosts="/private/etc/apache2/extra/httpd-vhosts.conf"
+alias hosts="e /etc/apache2/httpd.conf"
+alias vhosts="e /private/etc/apache2/extra/httpd-vhosts.conf"
 
 # PostgreSQL
 alias psqlstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"

@@ -16,6 +16,8 @@ alias lib="cd ~/Library/ && open ."
 alias del="saferm"
 alias cb="copytoclipboard"
 
+alias src="source ~/.bash_profile"
+
 # Apache
 alias apache="sudo apachectl"
 alias hosts="/etc/apache2/httpd.conf"

@@ -20,7 +20,7 @@ alias src="source ~/.bash_profile"
 
 # Apache
 alias apache="sudo apachectl"
-alias hosts="e /etc/apache2/httpd.conf"
+alias hosts="e /etc/hosts"
 alias vhosts="e /private/etc/apache2/extra/httpd-vhosts.conf"
 
 # PostgreSQL

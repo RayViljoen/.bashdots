@@ -16,6 +16,11 @@ alias lib="cd ~/Library/ && open ."
 alias del="saferm"
 alias cb="copytoclipboard"
 
+# Apache
+alias apache="sudo apachectl"
+alias hosts="/etc/apache2/httpd.conf"
+alias vhosts="/private/etc/apache2/extra/httpd-vhosts.conf"
+
 # PostgreSQL
 alias psqlstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias psqlstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"

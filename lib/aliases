@@ -20,7 +20,7 @@ alias cb="copytoclipboard"
 alias src="source ~/.bash_profile"
 
 # Artisan (Laravel)
-alias art="php artisan"
+alias art="php artisan --env=local_ray"
 
 # Apache
 alias apache="sudo apachectl"

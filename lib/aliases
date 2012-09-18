@@ -16,7 +16,11 @@ alias lib="cd ~/Library/ && open ."
 alias del="saferm"
 alias cb="copytoclipboard"
 
+# Reload dotfiles
 alias src="source ~/.bash_profile"
+
+# Artisan (Laravel)
+alias art="php artisan"
 
 # Apache
 alias apache="sudo apachectl"

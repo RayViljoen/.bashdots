@@ -21,6 +21,8 @@ alias src="source ~/.bash_profile"
 
 # Artisan (Laravel)
 alias art="php artisan --env=local_ray"
+# Composer
+alias composer="php composer.phar"
 
 # Apache
 alias apache="sudo apachectl"

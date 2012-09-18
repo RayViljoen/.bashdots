@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH="/usr/local/bin:$PATH:/usr/local/pear/bin/pear"
+export PATH="/usr/local/bin:$PATH:/usr/local/pear/bin"
 
 # Set .bash_profile
 BASHDOTS_SOURCE="${BASH_SOURCE[0]}"

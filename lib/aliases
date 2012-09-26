@@ -16,6 +16,8 @@ alias lib="cd ~/Library/ && open ."
 alias del="saferm"
 alias cb="copytoclipboard"
 
+alias sshconf="e ~/.ssh/config"
+
 # Reload dotfiles
 alias src="source ~/.bash_profile"
 

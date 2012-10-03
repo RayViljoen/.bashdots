@@ -50,3 +50,4 @@ function saferm {
 function copytoclipboard {
 	cat $1 | pbcopy
 }
+

@@ -16,6 +16,9 @@ alias lib="cd ~/Library/ && open ."
 alias del="saferm"
 alias cb="copytoclipboard"
 
+# NPM Scripts
+alias npms="npm run-script"
+
 alias sshconf="e ~/.ssh/config"
 
 # Reload dotfiles

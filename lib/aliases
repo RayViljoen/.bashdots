@@ -19,6 +19,8 @@ alias cb="copytoclipboard"
 # NPM Scripts
 alias npms="npm run-script"
 
+alias sshconf="e ~/.ssh/config"
+
 # Reload dotfiles
 alias src="source ~/.bash_profile"
 

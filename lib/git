@@ -3,7 +3,7 @@
 # ====== Aliases ======
 
 alias g="git status"
-alias gl="git log --graph --full-history --all --color --pretty=format:'%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s'"
+alias gl="git log --graph --color --pretty=format:'%x1b[31m%h%x1b[0m%x20- %s %x1b[32m%d'"
 alias gi="git init"
 alias ga="bd_git_add"
 alias gc="git commit -v -m"

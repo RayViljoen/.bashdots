@@ -11,7 +11,7 @@ alias gm="git merge"
 alias gb="git branch"
 alias gco="git checkout"
 alias gp="bd_git_push"
-alias gpl="git pull"
+alias gpl="git pull --rebase"
 alias gr="git reset HEAD"
 alias gamend="git commit --amend -m"
 

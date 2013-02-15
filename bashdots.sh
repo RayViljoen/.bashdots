@@ -37,17 +37,24 @@ defaults write com.apple.dashboard mcx-disabled -boolean YES
 # Reset Dock (After killing dashboard)
 killall Dock
 
-# Install quicklook plugins
-echo 'Installing quicklook plugins.'
-quicklook_dir="${HOME}/Library/QuickLook/"
-# Check for plugins dir and create if not exists
-if [ ! -d  $quicklook_dir ]; then
-    mkdir $quicklook_dir
+# Installs mac specific extras
+if [ `uname` = "Darwin" ]; then
+
+    # Install quicklook plugins
+    echo 'Installing quicklook plugins.'
+    quicklook_dir="${HOME}/Library/QuickLook/"
+    # Check for plugins dir and create if not exists
+    if [ ! -d  $quicklook_dir ]; then
+        mkdir $quicklook_dir
+    fi
+    # Copy plugins to ql dir
+    cp -r ./quicklook_plugins/ $quicklook_dir
+    # Reload plugins
+    qlmanage -r &>/dev/null;
+
+    
+
 fi
-# Copy plugins to ql dir
-cp -r ./quicklook_plugins/ $quicklook_dir
-# Reload plugins
-qlmanage -r &>/dev/null;
 
 # Install
 function linkIt() {
@@ -59,23 +66,6 @@ function linkIt() {
     ln -sf $PWD/.bash_profile ~/.bash_profile
     ln -sf $PWD/.bashrc ~/.bashrc
     ln -sf $PWD/.inputrc ~/.inputrc
-
-    #---------------------------
-    # --- Install any extras ---
-    #---------------------------
-    
-
-    # Check if mac
-    if [ `uname` = "Darwin" ]; then
-
-        # Homebrew packages
-        if type -P brew &>/dev/null; then
-            
-            # Install tree if not already
-            command -v tree >/dev/null 2>&1 || brew install tree
-        fi
-
-    fi
 
     # Source it
     source ~/.bash_profile
@@ -93,4 +83,5 @@ else
         linkIt
     fi
 fi
+
 unset linkIt

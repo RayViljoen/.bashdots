@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH="/usr/local/bin:$PATH:/usr/local/sbin"
+export PATH="/usr/local/bin:$PATH:/usr/local/sbin:$HOME/.rvm/bin"
 
 # Set .bash_profile
 BASHDOTS_SOURCE="${BASH_SOURCE[0]}"

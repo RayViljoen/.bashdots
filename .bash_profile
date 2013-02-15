@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH="/usr/local/bin:$PATH:/usr/local/sbin:~/pear/bin"
+export PATH="/usr/local/bin:$PATH:/usr/local/sbin"
 
 # Set .bash_profile
 BASHDOTS_SOURCE="${BASH_SOURCE[0]}"
@@ -30,3 +30,5 @@ for f in $(command ls ~/.node-completion); do
   test -f "$f" && . "$f"
 done
 # }}}
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

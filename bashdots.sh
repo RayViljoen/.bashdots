@@ -42,7 +42,7 @@ echo 'Installing quicklook plugins.'
 quicklook_dir="${HOME}/Library/QuickLook/"
 # Check for plugins dir and create if not exists
 if [ ! -d  $quicklook_dir ]; then
-	mkdir $quicklook_dir
+    mkdir $quicklook_dir
 fi
 # Copy plugins to ql dir
 cp -r ./quicklook_plugins/ $quicklook_dir
@@ -52,39 +52,45 @@ qlmanage -r &>/dev/null;
 # Install
 function linkIt() {
 
-	#----------------------------
-	# ----- Create symlinks -----
-	#----------------------------
+    #----------------------------
+    # ----- Create symlinks -----
+    #----------------------------
 
-	ln -sf $PWD/.bash_profile ~/.bash_profile
-	ln -sf $PWD/.bashrc ~/.bashrc
-	ln -sf $PWD/.inputrc ~/.inputrc
+    ln -sf $PWD/.bash_profile ~/.bash_profile
+    ln -sf $PWD/.bashrc ~/.bashrc
+    ln -sf $PWD/.inputrc ~/.inputrc
 
-	#---------------------------
-	# --- Install any extras ---
-	#---------------------------
-	
-	# Homebrew packages
-	if type -P brew &>/dev/null; then
-		
-		# Install tree if not already
-		command -v tree >/dev/null 2>&1 || brew install tree
-	fi
+    #---------------------------
+    # --- Install any extras ---
+    #---------------------------
+    
 
-	# Source it
-	source ~/.bash_profile
-	echo "Done"
+    # Check if mac
+    if [ `uname` = "Darwin" ]; then
+
+        # Homebrew packages
+        if type -P brew &>/dev/null; then
+            
+            # Install tree if not already
+            command -v tree >/dev/null 2>&1 || brew install tree
+        fi
+
+    fi
+
+    # Source it
+    source ~/.bash_profile
+    echo "Done"
 }
 
 # Confirm symlinks unless forced
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
-	linkIt
+    linkIt
 # Default to install with prompt
 else
-	read -p "Create BashDots symlinks and overwrite existing bash dotfiles? (y/n) " -n 1
-	echo
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		linkIt
-	fi
+    read -p "Create BashDots symlinks and overwrite existing bash dotfiles? (y/n) " -n 1
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        linkIt
+    fi
 fi
 unset linkIt

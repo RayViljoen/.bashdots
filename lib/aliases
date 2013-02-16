@@ -16,6 +16,9 @@ alias lib="cd ~/Library/ && open ."
 alias del="saferm"
 alias cb="copytoclipboard"
 
+# Emscripten executable
+alias emcc="~/Development/emscripten/emcc"
+
 # NPM Scripts
 alias npms="npm run-script"
 

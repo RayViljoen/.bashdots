@@ -29,8 +29,6 @@ alias src="source ~/.bash_profile"
 
 # Artisan (Laravel)
 alias art="php artisan --env=local_ray"
-# Composer
-alias composer="php composer.phar"
 
 # Redis4you
 alias r4u="redis-cli -h 50.30.35.9 -p 2305 -a 8d0956021daf3d28fca8df109c82ea6a"

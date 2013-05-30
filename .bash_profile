@@ -2,6 +2,9 @@
 
 export PATH="/usr/local/bin:$PATH:/usr/local/sbin:$HOME/.rvm/bin"
 
+# Add keys to SSH agent
+ssh-add
+
 # Set .bash_profile
 BASHDOTS_SOURCE="${BASH_SOURCE[0]}"
 # Resolve symlinks

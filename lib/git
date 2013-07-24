@@ -31,7 +31,7 @@ function bd_git_add() {
 	if [ "$1" ]; then # Check if argument passed
 		git add $1
 	else # Default to -A
-		git add -A
+		git add -A :/
 	fi
 }
 

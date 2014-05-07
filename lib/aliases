@@ -15,9 +15,6 @@ alias lib="cd ~/Library/ && open ."
 alias del="saferm"
 alias cb="copytoclipboard"
 
-# Emscripten executable
-alias emcc="~/Development/emscripten/emcc"
-
 # NPM Scripts
 alias npms="npm run-script"
 
@@ -26,31 +23,10 @@ alias sshconf="e ~/.ssh/config"
 # Reload dotfiles
 alias src="source ~/.bash_profile"
 
-# Artisan (Laravel)
-alias art="php artisan --env=local_ray"
-
-# Redis4you
-alias r4u="redis-cli -h 50.30.35.9 -p 2305 -a 8d0956021daf3d28fca8df109c82ea6a"
-
 # Apache
 alias apache="sudo apachectl"
 alias hosts="e /etc/hosts"
 alias vhosts="e /private/etc/apache2/extra/httpd-vhosts.conf"
-
-# PostgreSQL
-alias psqlstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias psqlstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-
-# MongoDB
-alias mongostart="mongod run --config /usr/local/etc/mongod.conf"
-
-# Neo4j
-alias neostart="neo4j start"
-alias neostop="neo4j stop"
-alias neoapi="open http://localhost:7474/db/data/"
-alias neoadmin="open http://localhost:7474/webadmin/"
-
-alias cement="~/Development/Cement/Lib/cement"
 
 # Processes
 alias pfind="ps aux | grep"
@@ -76,7 +52,6 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade; npm update -
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en1"
 
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
@@ -95,12 +70,3 @@ alias clean="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -r
 alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
 
-# Kill volume
-alias mute="osascript -e 'set volume 0'"
-
-# Unf*#@ Xcode
-alias xfix="launchctl list|grep UIKitApplication|awk '{print $3}'|xargs launchctl remove"
-
-# Ping
-alias p1="ping -c 1"
-alias p3="ping -c 3"

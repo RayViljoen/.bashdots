@@ -53,9 +53,6 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade; npm update -
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
-# Enhanced WHOIS lookups
-alias whois="whois -h whois-servers.net"
-
 # View HTTP traffic
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 

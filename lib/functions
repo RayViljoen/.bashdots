@@ -87,12 +87,15 @@ function appletouchicons {
 	$CONVERT_CMD $PWD/favicon-16.png $PWD/favicon-32.png $PWD/favicon-64.png $PWD/favicon-128.png $PWD/favicon-256.png -colors 256 $PWD/favicon.ico
 
 	echo "Generating touch icons"
-	$CONVERT_CMD $PWD/favicon-256.png -resize 57x57 $PWD/apple-touch-icon.png
-	cp $PWD/apple-touch-icon.png $PWD/apple-touch-icon-precomposed.png
-	cp $PWD/apple-touch-icon.png $PWD/apple-touch-icon-57x57-precomposed.png
-	$CONVERT_CMD $PWD/favicon-256.png -resize 72x72 $PWD/apple-touch-icon-72x72-precomposed.png
-	$CONVERT_CMD $PWD/favicon-256.png -resize 114x114 $PWD/apple-touch-icon-114x114-precomposed.png
-	$CONVERT_CMD $PWD/favicon-256.png -resize 144x144 $PWD/apple-touch-icon-144x144-precomposed.png
+
+	$CONVERT_CMD $PWD/favicon-256.png -resize 57x57 $PWD/apple-touch-icon-57x57.png
+	$CONVERT_CMD $PWD/favicon-256.png -resize 114x114 $PWD/apple-touch-icon-114x114.png
+	$CONVERT_CMD $PWD/favicon-256.png -resize 72x72 $PWD/apple-touch-icon-72x72.png
+	$CONVERT_CMD $PWD/favicon-256.png -resize 144x144 $PWD/apple-touch-icon-144x144.png
+	$CONVERT_CMD $PWD/favicon-256.png -resize 60x60 $PWD/apple-touch-icon-60x60.png
+	$CONVERT_CMD $PWD/favicon-256.png -resize 120x120 $PWD/apple-touch-icon-120x120.png
+	$CONVERT_CMD $PWD/favicon-256.png -resize 76x76 $PWD/apple-touch-icon-76x76.png
+	$CONVERT_CMD $PWD/favicon-256.png -resize 152x152 $PWD/apple-touch-icon-152x152.png
 
 	echo "Removing temp files"
 	rm -rf $PWD/favicon-16.png

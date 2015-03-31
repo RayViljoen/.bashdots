@@ -3,9 +3,6 @@
 # User downloads directory
 DOWNLOADS_DIR="${HOME}/Downloads/"
 
-# Default editor
-EDITOR="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-
 # ============== Misc configs ==============
 
 # Case-insensitive globbing (used in pathname expansion)

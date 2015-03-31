@@ -2,7 +2,7 @@
 
 # Shortcuts
 
-alias e=$EDITOR
+alias e="atom"
 alias dev="cd ~/Development/"
 alias mamp="cd /Applications/MAMP/htdocs/"
 alias ..="cd .."
@@ -66,4 +66,3 @@ alias clean="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -r
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder"
-

@@ -35,11 +35,11 @@ alias pcpu="top -o cpu"
 alias pkill="kill -9 "
 
 # List all files colorized in long format
-alias l="ls -Gl"
+alias l="ls -Glh"
 # Show hidden
-alias la="ls -Gla"
+alias la="ls -Glha"
 # Only dirs
-alias ld='ls -l | grep "^d"'
+alias ld='ls -lh | grep "^d"'
 
 # Always use color output for `ls`
 alias ls="command ls -G"

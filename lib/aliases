@@ -4,7 +4,6 @@
 
 alias e="atom"
 alias dev="cd ~/Development/"
-alias mamp="cd /Applications/MAMP/htdocs/"
 alias ..="cd .."
 alias o="open"
 alias oo="open ."
@@ -14,11 +13,6 @@ alias mo="makeopen"
 alias lib="cd ~/Library/ && open ."
 alias del="saferm"
 alias cb="copytoclipboard"
-
-# NPM Scripts
-alias npms="npm run-script"
-
-alias sshconf="e ~/.ssh/config"
 
 # Reload dotfiles
 alias src="source ~/.bash_profile"
@@ -47,9 +41,6 @@ alias ls="command ls -G"
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
-# Get OS X Software Updates, update Homebrew itself, and upgrade installed Homebrew packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; npm update -g'
-
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
@@ -58,10 +49,6 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 
 # File size
 alias size="stat -f \"%z bytes\""
-
-# Empty the Trash on all mounted volumes and the main HDD
-# Also, clear Apple’s System Logs to improve shell startup speed
-alias clean="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"

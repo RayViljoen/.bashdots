@@ -29,6 +29,10 @@ function makeopen {
 	mkdir $1 && cd $1
 }
 
+# Continue a download using curl ( args: from[src] - to[dst] )
+function download {
+	curl -L -o $2 -C - $1
+}
 # Trash file or dir to user .Trash
 function saferm {
 	mv -f "$@" ~/.Trash
@@ -44,7 +48,7 @@ function copytoclipboard {
 #
 # This bash script takes an image as a parameter, and uses ImageMagick to convert it to several
 # other formats used on modern websites. The following copies are generated:
-# 
+#
 # * apple-touch-icon-114x114-precomposed.png
 # * apple-touch-icon-57x57-precomposed.png
 # * apple-touch-icon-72x72-precomposed.png
@@ -95,4 +99,3 @@ function appletouchicons {
 	rm -rf $PWD/favicon-256.png
 
 }
-

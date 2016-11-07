@@ -21,7 +21,7 @@ alias src="source ~/.bash_profile"
 # Apache
 alias apache="sudo apachectl"
 alias hosts="e /etc/hosts"
-alias vhosts="e /private/etc/apache2/extra/httpd-vhosts.conf"
+alias vhosts="e /usr/local/etc/apache2/2.4/extra/httpd-vhosts.conf"
 
 # Processes
 alias pfind="ps aux | grep"

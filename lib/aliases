@@ -19,7 +19,6 @@ alias cb="copytoclipboard"
 alias src="source ~/.bash_profile"
 
 # Apache
-alias apache="sudo apachectl"
 alias hosts="e /etc/hosts"
 alias vhosts="e /usr/local/etc/apache2/2.4/extra/httpd-vhosts.conf"
 
@@ -54,3 +53,6 @@ alias size="stat -f \"%z bytes\""
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder"
+
+# Rebuild context menus
+alias contextmenurefresh="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo 'Open With has been rebuilt, Finder will relaunch'"

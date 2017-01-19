@@ -4,6 +4,7 @@
 
 alias g="git status"
 alias gl="git log --graph --color --pretty=format:'%x1b[31m%h%x1b[0m%x20- %s %x1b[32m%d'"
+alias gd="git diff --color | diff-so-fancy"
 alias gi="git init"
 alias ga="bd_git_add"
 alias gc="git commit -v -m"
@@ -44,11 +45,3 @@ function git_dirty() {
 function git_branch() {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
-
-# Use Git colored diff when available
-hash git &>/dev/null
-if [ $? -eq 0 ]; then
-	function diff() {
-		git diff --no-index --color-words "$@"
-	}
-fi

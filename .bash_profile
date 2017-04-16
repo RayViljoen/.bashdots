@@ -1,10 +1,7 @@
 #!/bin/bash
 
-# export PATH="/usr/local/bin:$PATH:/usr/local/sbin:$HOME/.rvm/bin"
-export ANDROID_HOME=`brew --prefix android`
-
 # Add keys to SSH agent
-ssh-add
+# ssh-add
 
 # Set .bash_profile
 BASHDOTS_SOURCE="${BASH_SOURCE[0]}"

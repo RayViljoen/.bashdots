@@ -3,7 +3,7 @@
 # Shortcuts
 
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias e="atom"
+alias e="code"
 alias dev="cd ~/Development/"
 alias ..="cd .."
 alias o="open"

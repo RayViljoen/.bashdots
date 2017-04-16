@@ -4,7 +4,6 @@
 
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias e="code"
-alias dev="cd ~/Development/"
 alias ..="cd .."
 alias o="open"
 alias oo="open ."

@@ -18,11 +18,7 @@ cd "$BD_DIR"
 echo 'Setting new osx defaults.'
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
-# Avoid creating .DS_Store files on network volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-# Prevent Time Machine from prompting to use new hard drives as backup volume
-defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+defaults write NSGlobalDomain KeyRepeat -float 0.000000000001
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -boolean YES
 # Reset Dock (After killing dashboard)

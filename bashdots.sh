@@ -17,8 +17,10 @@ cd "$BD_DIR"
 # Configure OSX Defaults
 echo 'Setting new osx defaults.'
 
+# Disable key hold
+defaults write -g ApplePressAndHoldEnabled -bool false
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -float 0.000000000001
+defaults write NSGlobalDomain KeyRepeat -float 0.00001
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -boolean YES
 # Reset Dock (After killing dashboard)

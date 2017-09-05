@@ -14,6 +14,9 @@ BD_DIR="$(dirname "$0")"
 # Change to .bashdots
 cd "$BD_DIR"
 
+# Disable key hold
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 # Install
 function linkIt() {
 

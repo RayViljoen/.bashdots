@@ -2,7 +2,8 @@
 
 # Shortcuts
 
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias atom="/Applications/Atom.app/Contents/Resources/app/atom.sh"
+alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 alias e="code"
 alias ..="cd .."
 alias o="open"
